@@ -1,0 +1,263 @@
+<!DOCTYPE>
+
+<html>
+<head>
+    <style>
+
+      body{
+        font-family:latha;
+        color:white;
+        background: linear-gradient( rgba(0,0,0,0.90),rgba(0,0,0,0.75),rgba(0,0,0,0.38),rgba(0,0,0,0)
+        )
+
+            ,url(https://images.trvl-media.com/hotels/4000000/3940000/3930500/3930468/357a9057_z.jpg)no-repeat;
+        background-size: cover;
+        display: flex;
+         flex-direction: column;
+         min-height: 100vh;
+
+      }
+
+          .box{ width: 900px;
+            border:1px solid none;
+            flex: 1;
+            position: absolute;
+            right: 8px;
+          }
+
+            .box ul li{
+                width:120;
+                float:left;
+                margin: 10px auto;
+                text-align:center;
+            }
+
+            .box ul li a{ text-decoration: none;
+              corlor:darkgray;}
+
+            .box ul li:hover{ background-color: pink;}
+            .box ul li a:hover{color: white;}
+
+            .wd{
+              width: 1227px;
+              height: 540px;
+              background-color: black;
+              opacity: 0.80;
+              padding: 10px;
+              position: absolute;
+              bottom: -7px;
+              flex: 0;
+              border-radius: 15px 50px;
+
+            }
+
+            .wd h1{
+                text-align: center;
+                text-transform: uppercase;
+                font-weight: 100px;
+            }
+
+            .row {
+              display: -ms-flexbox; /* IE10 */
+              display: flex;
+              -ms-flex-wrap: wrap; /* IE10 */
+              flex-wrap: wrap;
+              margin: 0 -16px;
+            }
+
+            .col-25 {
+              -ms-flex: 25%; /* IE10 */
+              flex: 25%;
+            }
+
+            .col-50 {
+              -ms-flex: 50%; /* IE10 */
+              flex: 50%;
+            }
+
+            .col-75 {
+              -ms-flex: 75%; /* IE10 */
+              flex: 75%;
+            }
+
+            .col-25,
+            .col-50,
+            .col-75 {
+              padding: 0 16px;
+            }
+
+            .col-60 {
+              padding: 0 3px;
+              width: 60px;
+            }
+
+            .container {
+              background-color: #pink;
+              padding: 5px 20px 15px 20px;
+              border: 1px solid lightgrey;
+              border-radius: 3px;
+            }
+
+            input[type=text] {
+              width: 100%;
+              margin-bottom: 20px;
+              padding: 12px;
+              border: 1px solid #ccc;
+              border-radius: 3px;
+            }
+
+            label {
+              margin-bottom: 10px;
+              display: block;
+            }
+
+            .icon-container {
+              margin-bottom: 20px;
+              padding: 7px 0;
+              font-size: 24px;
+            }
+
+            .btn {
+              background-color: #04AA6D;
+              color: white;
+              padding: 12px;
+              margin: 10px 0;
+              border: none;
+              width: 100%;
+              border-radius: 3px;
+              cursor: pointer;
+              font-size: 17px;
+            }
+
+            .btn:hover {
+              background-color: #45a049;
+            }
+
+            span.price {
+              float: right;
+              color: grey;
+            }
+
+            /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (and change the direction - make the "cart" column go on top) */
+            @media (max-width: 800px) {
+              .row {
+                flex-direction: column-reverse;
+              }
+              .col-25 {
+                margin-bottom: 20px;
+              }
+            }
+
+            .exp-wrapper {
+              position: relative;
+              border: 1px solid #aaa;
+              display: flex;
+              width: 300px;
+              justify-content: space-around;
+              height: 36px;
+              line-height: 36px;
+              font-size: 24px;
+            }
+
+            .exp-wrapper:after {
+              content: '/';
+              position: absolute;
+              left: 50%;
+              margin-left: -4px;
+              color: #aaa;
+            }
+
+            input.exp {
+
+              width: 134px;
+              font-size: 14px;
+            }
+
+
+    </style>
+</head>
+<body>
+
+  <div class="box">
+      <ul type="none">
+          <li><a href="">Home</a></li>
+          <li><a href="">Menu</a></li>
+          <li><a href="">Reservations</a></li>
+          <li><a href="">Online Order</a></li>
+          <li><a href="">Contact</a></li>
+      </ul>
+  </div>
+
+  <div class="wd">
+
+      <h1> Reservations</h1>
+
+            <div class="row">
+        <div class="col-75">
+          <div class="container">
+            <form action="/action_page.php">
+
+              <div class="row">
+                <div class="col-50">
+                  <h3>Billing Address</h3>
+                  <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                  <input type="text" id="fname" name="firstname" placeholder="Enter Name">
+                  <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                  <input type="text" id="email" name="email" placeholder="Enter Email">
+                  <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                  <input type="text" id="adr" name="address" placeholder="Enter Address">
+                  <label for="city"><i class="fa fa-institution"></i> City</label>
+                  <input type="text" id="city" name="city" placeholder="Enter City">
+
+                  <div class="row">
+                    <div class="col-50">
+                      <label for="state">Province</label>
+                      <input type="text" id="state" name="state" placeholder="Enter Province">
+                    </div>
+                    <div class="col-50">
+                      <label for="zip">Postal Code</label>
+                      <input type="text" id="zip" name="zip" placeholder="Enter Postal Code">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-50">
+                  <h3>Payment</h3>
+                  <label for="fname">Credit Card</label>
+                  <div class="icon-container">
+                    <div class="credit-cards" style="text-align: center; width: 100%">
+                      <img height="40" src="https://shoplineimg.com/assets/footer/card_visa.png"/>
+                      <img height="40" src="https://shoplineimg.com/assets/footer/card_master.png"/>
+                      <img height="40" src="https://shoplineimg.com/assets/footer/card_paypal.png"/>
+                      <img height="40" src="https://shoplineimg.com/assets/footer/card_amex.png"/>
+                    </div>
+                  </div>
+                  <label for="cname">Name on Card</label>
+                  <input type="text" id="cname" name="cardname" placeholder="Enter Name On Card">
+                  <label for="ccnum">Credit card number</label>
+                  <input type="text" id="ccnum" name="cardnumber" placeholder="Enter Credit Card Number">
+
+                  <div class="exp-wrapper">
+                    <input autocomplete="off" class="exp" id="month" maxlength="2" pattern="[0-9]*" inputmode="numerical" placeholder="MM" type="text" data-pattern-validate />
+                    <input autocomplete="off" class="exp" id="year" maxlength="2" pattern="[0-9]*" inputmode="numerical" placeholder="YY" type="text" data-pattern-validate />
+                  </div>
+
+                    <div class="col-60">
+                      <label for="cvv">CVV</label>
+                      <input type="text" id="cvv" name="cvv" placeholder="CVV">
+                    </div>
+                  </div>
+                </div>
+
+              </div><br><br>
+              <input type="submit" value="Continue to checkout" class="btn">
+          </div>
+        </div>
+
+      </div>
+
+
+
+
+</body>
+</html>
